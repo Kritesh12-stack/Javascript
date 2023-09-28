@@ -44,3 +44,26 @@ const users = [
 // console.log(Object.values(tinderUser));
 // console.log(Object.entries(tinderUser));
 
+// object destructuring
+
+const course = {
+    courseName : "Master JS",
+    coursePrice : 999,
+    courseInstructor :"Kritesh"
+}
+
+// console.log(course.courseInstructor);
+
+// const {courseInstructor} = course;
+// console.log(courseInstructor);
+
+const {courseInstructor : instructor} = course;
+console.log(instructor);
+
+// API(JSON)
+// can be of two types objects and array
+// {
+//     "name":"kri",
+//     "a":"1",
+//     "b":2
+// }
