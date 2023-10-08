@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    
+</body>
+<script>
+    const box = document.createElement('div');
+    console.log(box)
+    box.id = 2;
+    box.className = "newBox";
+    box.setAttribute('title','generated title');
+    box.innerHTML = "<b>Hello </b>";
+    box.style.backgroundColor = 'green';
+    box.style.padding = '4px';
+    const addText = document.createTextNode('Kritesh');
+    box.appendChild(addText);
+    // box.innerText = "Kritesh";
+    document.body.appendChild(box)
+
+</script>
+</html>
