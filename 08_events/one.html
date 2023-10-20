@@ -57,18 +57,27 @@
     // });
     
     
-    document.getElementById('images').addEventListener('click',()=>{
-        console.log('ul is clicked')
-    }) 
-    document.getElementById('owl').addEventListener('click',(e)=>{
-        console.log('owl clicked')
-        e.stopPropagation(); // stops the propergation
-    });     
+    // document.getElementById('images').addEventListener('click',()=>{
+    //     console.log('ul is clicked')
+    // }) 
+    // document.getElementById('owl').addEventListener('click',(e)=>{
+    //     console.log('owl clicked')
+    //     e.stopPropagation(); // stops the propergation
+    // });     
     document.getElementById('google').addEventListener('click',(e)=>{
         e.preventDefault();
         e.stopPropagation();
         console.log('google clicked');
-    })            
+    })    
+    
+    document.querySelector('#images').addEventListener('click',(e)=>{
+        // console.log(e.target.tagName)
+        if(e.target.tagName === 'IMG'){
+            let removeItem = e.target.parentNode;
+            console.log(removeItem.tagName)
+            removeItem.remove();
+        }
+    })
 
 
 
