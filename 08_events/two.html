@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<body style="background-color: #212121; color: white ;">
+      <h1 >Learning Async</h1>
+      <button id="stop">Stop</button>
+</body>
+<script>
+    // setTimeout(() => {
+    //     console.log("Event Executed")
+    // }, 3000);
+
+        const changeH1 = () =>{
+            document.querySelector("h1").innerHTML = "Best JS coder"
+            console.log("Changed")
+        }
+        // changeH1()
+        const event1 = setTimeout(changeH1,2000);
+        // clearTimeout(event1)
+
+        document.querySelector('#stop').addEventListener('click',()=>{
+            clearTimeout(event1)
+            console.log("Stopped")
+        })
+
+        
+
+</script>
+</html>
