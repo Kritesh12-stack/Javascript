@@ -18,18 +18,21 @@
         let color = "#"
         for (let i = 0; i < 6; i++) {
             color += hex[Math.floor(Math.random() * 16)]
-            console.log(color)
+            // console.log(color)
         }
         return color
     }
+    // console.log(randomColor())
     let intervalId;
     const start = document.querySelector("#start")
     const stop = document.querySelector("#stop")
     const startChange = () => {
-        intervalId = setInterval(() => {
-            document.body.style.backgroundColor = randomColor();
-            console.log("Started")
-        },1000)
+        if (intervalId === null) {
+            intervalId = setInterval(() => {
+                document.body.style.backgroundColor = randomColor();
+                console.log("Started")
+            }, 1000)
+        }
     }
     start.addEventListener('click', startChange)
     stop.addEventListener('click', () => {
