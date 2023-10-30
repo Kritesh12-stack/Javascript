@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Stop</title>
+</head>
+<body style="background-color: #212121; color:aliceblue">
+    <h1>Stopwatch</h1>
+    <div class="box" style="margin: 5px ; background-color: yellow; color: #212121 ; border-radius: 20px; width: 90px; height:40px; display: flex; justify-content: center; align-items: center;"></div>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    let intervalId;
+    const start = document.querySelector("#start")
+    const stop = document.querySelector("#stop")
+    const startWatch = () =>{ 
+            intervalId = setInterval(()=>{
+            const time = new Date;
+            document.querySelector(".box").innerText = time.toLocaleTimeString();
+            console.log("Started")   
+        },1000)}
+    start.addEventListener('click',startWatch)
+    stop.addEventListener('click',()=>{
+        clearInterval(intervalId)
+        console.log("stopped")
+        intervalId = null
+    })
+</script>
+</html>
